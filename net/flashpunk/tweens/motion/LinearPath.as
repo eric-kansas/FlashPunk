@@ -56,6 +56,7 @@
 			if (_last)
 			{
 				_distance += Math.sqrt((x - _last.x) * (x - _last.x) + (y - _last.y) * (y - _last.y));
+				if (_distance == 0) _distance = 1;
 				_pointD[_points.length] = _distance;
 			}
 			_points[_points.length] = _last = new Point(x, y);
